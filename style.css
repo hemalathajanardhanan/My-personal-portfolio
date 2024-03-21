@@ -1,0 +1,227 @@
+.image-container {
+    text-align: left; /* Center the image horizontally */
+  }
+  
+  .image-container img {
+    max-width: 20%;  /* Adjust the percentage for desired width */
+    max-height: 20%; /* Adjust the percentage for desired height */
+    display: block;  /* Ensures the image fills its container horizontally */
+    margin: 0 auto;  /* Centers the image vertically within the container */
+  }
+  
+
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7dcdc; /* White background */
+  }
+  
+  header {
+    background-color: #f58523;
+    padding: 20px;
+    text-align: center;
+    text-size-adjust: 16px;
+    
+  }
+  
+  h1, h2 {
+    margin: 0;
+    color: #0f0e0c; /* Orange color */
+  }
+  
+  nav {
+    background-color: #fdcb6e;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
+
+  }
+  @keyframes animatenav {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ccc;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  .skills-list {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills-list li {
+    margin-bottom: 5px;
+  }
+  
+  .project-card {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    animation: animateProjectCard 1s ease-in-out forwards;
+  }
+  
+  @keyframes animateProjectCard {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .project-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    animation: animateProjectImage 1s ease-in-out forwards;
+  }
+  
+  @keyframes animateProjectImage {
+    from { opacity: 0; transform: translateY(20px); } /* Image slides up from bottom */
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Additional styles for text animation (optional): */
+  
+  h3 {
+    animation: animateText 1s ease-in-out forwards;
+  }
+  
+  @keyframes animateText {
+    from { opacity: 0; transform: translateX(-20px); } /* Text slides in from left */
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  p {
+    color: #333; /* Text color (dark gray) */
+  }
+  
+  
+  #contact form {  /* Center the form within the contact section */
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;  /* Set width for input fields and textarea */
+    padding: 0.5em;  /* Add padding for input fields and textarea */
+    margin-bottom: 1em;  /* Add some margin for input fields and textarea */
+    border: 1px solid #ccc;  /* Add a border for input fields and textarea */
+  }
+  
+  input[type="submit"] {
+    background-color: #f86809;  /* Set background color for submit button */
+    color: white;  /* Set text color for submit button */
+    padding: 0.7em 1em;  /* Add padding for submit button */
+    border: none;  /* Remove border for submit button */
+    border-radius: 5px;  /* Add border radius for submit button */
+    cursor: pointer;  /* Set cursor style for submit button */
+  }
+  section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e2921a; /* Add border for each section */
+    overflow-y: auto; /* Enable vertical scrolling for sections */
+  }
+  
+  section#about {
+    display: flex; /* Make the section a flex container */
+    align-items: center; /* Align content vertically */
+    justify-content: space-between; /* Distribute content horizontally */
+  }
+  
+  .about-image {
+    width: 350px; /* Adjust image width as needed */
+    animation: imageSlideIn 3s ease-in-out forwards;
+  }
+  
+  @keyframes imageSlideIn {
+    from { transform: translateX(-20px); opacity: 0; } /* Slide from left, initially invisible */
+    to { transform: translateX(0); opacity: 1; } /* Slide to position, fully visible */
+  }
+  section#about p {
+    animation: textSlideIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes textSlideIn {
+    from { transform: translateX(20px); opacity: 0; } /* Slide from right, initially invisible */
+    to { transform: translateX(0); opacity: 1; } /* Slide to position, fully visible */
+  }
+  .about-text {
+    font-size: 2.5em; /* Increase font size for the about text */
+    text-align: center; /* Center text within the paragraph */
+    line-height: 2; /* Adjust line height for spacing between lines */
+  }
+  .contact-links {
+    padding-right: 20px; /* Add padding to the entire list */
+  }
+  
+  .contact-links li:last-child {
+    padding-right: 0px; /* Remove padding from the last list item */
+  }
+  #animated-text {
+    display: inline-block; /* Keeps the text on a single line */
+  }
+  
+  #animated-text span {
+    opacity: 0; /* Initially hide all letters */
+    animation: show-text 1s forwards; /* Animation for each letter */
+  }
+  
+  #animated-text span:nth-child(n) {
+    animation-delay: calc(0.1s * (n - 1)); /* Delay for each letter */
+  }
+  
+  @keyframes show-text {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  footer {
+    text-align: center; /* Center align the copyright text */
+    font-size: 0.8em; /* Adjust font size as needed */
+    margin-top: 20px; /* Add some space above the copyright */
+    color: #aaa; /* Set a light color for the text */
+  }
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to new lines */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+  
+  .project-card li {
+    width: calc(25% - 20px); /* Adjust width as needed (considering margins) */
+    margin: 10px; /* Add some spacing between projects */
+    border: 1px solid #ddd; /* Optional: add a border (adjust style) */
+    padding: 10px; /* Optional: add padding */
+  }
+  
+    
